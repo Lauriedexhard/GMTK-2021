@@ -17,7 +17,7 @@ public class Magnet : MonoBehaviour
 
    // bool magon = false;
 
-    public float distance = 5;
+    public float distance;
 
     //Vector2 playerpostion;
 

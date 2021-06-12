@@ -50,7 +50,7 @@ public class PlayerControllor : MonoBehaviour
 
     public void ThrustForward(float amount)
     {
-        Vector2 force = transform.up * amount * speed * Time.deltaTime;
+        Vector2 force = transform.up * amount * (speed - ShipBallControllor.Mass) * Time.deltaTime;
 
         rb.AddForce(force);
     }

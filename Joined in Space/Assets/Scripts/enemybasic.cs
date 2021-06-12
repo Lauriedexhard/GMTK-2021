@@ -26,8 +26,13 @@ public class enemybasic : MonoBehaviour
     {
         if(collision.gameObject.layer == 7)
         {
-            Destroy(enemy);
-            Destroy(enemy2);
+            enemy.SetActive(false);
+            enemy2.SetActive(false);
+        }
+        else if(collision.gameObject.layer == 6)
+        {
+            enemy.SetActive(false);
+            enemy2.SetActive(false);
         }
 
     }
@@ -36,8 +41,8 @@ public class enemybasic : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
         {
-            Destroy(enemy);
-            Destroy(enemy2);
+            enemy.SetActive(false);
+            enemy2.SetActive(false);
         }
     }
 

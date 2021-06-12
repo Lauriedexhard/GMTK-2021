@@ -13,6 +13,9 @@ public class ShipHealth : MonoBehaviour
 
     public BoxCollider2D BC;
 
+    public GameObject ShipCh;
+    public GameObject PlayerCh;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,17 @@ public class ShipHealth : MonoBehaviour
             ShipSR.sprite = newSprite;
             GetComponent<Collider2D>().isTrigger = true;
             Destroy(Mag);
+
+            //ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed - 5;
+            //ShipBallControllor.Mass = ShipBallControllor.Mass - 10;
+
+            //Ship Ball
+            if (ShipCh.transform.parent  == PlayerCh)
+            {
+                ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed - 5;
+                ShipBallControllor.Mass = ShipBallControllor.Mass - 10;
+            }
+            
         }
     }
 

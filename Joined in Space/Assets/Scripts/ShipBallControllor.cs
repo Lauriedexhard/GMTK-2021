@@ -10,6 +10,13 @@ public class ShipBallControllor : MonoBehaviour
     public static float Charge;
 
     public Text Chargeind;
+    public Text ThrustUI;
+
+    public static float PowerUsed;
+    public float PUPub;
+
+    public static float Mass;
+    public float MassPub;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +29,7 @@ public class ShipBallControllor : MonoBehaviour
     {
         if(Charge < 100)
         {
-            Charge += Time.deltaTime * 200;
+            Charge += Time.deltaTime * (200 - PowerUsed);
             GunReady = false;
         }
 
@@ -38,5 +45,12 @@ public class ShipBallControllor : MonoBehaviour
         }
 
         Chargeind.text = "Charge: " + Charge;
+        ThrustUI.text = "Thrust: " + (300 - Mass);
+
+        Mass = Mathf.Clamp(Mass, -300, 250);
+        PowerUsed = Mathf.Clamp(PowerUsed, -200, 180);
+
+        PUPub = PowerUsed;
+        MassPub = Mass;
     }
 }

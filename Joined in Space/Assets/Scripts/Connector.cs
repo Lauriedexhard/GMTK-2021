@@ -14,7 +14,7 @@ public class Connector : MonoBehaviour
     public GameObject Magnetring;
 
 
-
+    
 
 
 
@@ -31,11 +31,45 @@ public class Connector : MonoBehaviour
         {
             if(Input.GetMouseButton(1))
             {
-                Player = collision.gameObject;
+                Player = GameObject.Find("Player");
                 Ship.transform.parent = Player.transform;
                 Debug.Log("bang");
                 Ship.layer = 6;
                 Destroy(Magnetring);
+
+                //Ship Ball Stuff
+
+                if (Ship.name == "BasicShip")
+                {
+                    ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed + 5;
+                    ShipBallControllor.Mass = ShipBallControllor.Mass + 10;
+                }
+
+                if (Ship.name == "GenShip")
+                {
+                    ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed - 20;
+                    ShipBallControllor.Mass = ShipBallControllor.Mass + 10;
+                }
+
+                if (Ship.name == "ThrustShip")
+                {
+                    ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed + 5;
+                    ShipBallControllor.Mass = ShipBallControllor.Mass - 40;
+                }
+
+                if (Ship.name == "4GunShip")
+                {
+                    ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed + 15;
+                    ShipBallControllor.Mass = ShipBallControllor.Mass + 10;
+                }
+
+                if (Ship.name == "RocketShip")
+                {
+                    ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed + 15;
+                    ShipBallControllor.Mass = ShipBallControllor.Mass + 10;
+                }
+
+
             }
 
 
