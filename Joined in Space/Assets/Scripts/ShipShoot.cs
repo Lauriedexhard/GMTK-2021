@@ -77,6 +77,8 @@ public class ShipShoot : MonoBehaviour
 
         else if(ShipitsSelf.name == "RocketShip")
         {
+            Debug.Log("rockets away");
+
             GameObject bullet = Instantiate(Rocketprefab, firepoint.position, firepoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firepoint.up * rocketForce, ForceMode2D.Impulse);

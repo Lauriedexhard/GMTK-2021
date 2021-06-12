@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 5791023363810299917}
   - component: {fileID: 5791023363810299916}
   - component: {fileID: 5791023363810299915}
-  - component: {fileID: 978864834121620961}
   - component: {fileID: 8120160719406994917}
+  - component: {fileID: 2715126256292567179}
   m_Layer: 0
   m_Name: RocketShip
   m_TagString: Untagged
@@ -159,7 +159,25 @@ MonoBehaviour:
   Ship: {fileID: 5791023363810299919}
   C2D: {fileID: 5791023363810299916}
   Magnetring: {fileID: 5791023364665476468}
---- !u!114 &978864834121620961
+--- !u!114 &8120160719406994917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791023363810299919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf2351e08eba4048be84308d3a37759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSprite: {fileID: 21300000, guid: 1d9f43f6c0003f8429fc3b948340bfd9, type: 3}
+  Mag: {fileID: 5791023364665476468}
+  ShipSR: {fileID: 5791023363810299917}
+  BC: {fileID: 5791023363810299916}
+  ShipCh: {fileID: 5791023363810299919}
+  PlayerCh: {fileID: 0}
+--- !u!114 &2715126256292567179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,24 +198,6 @@ MonoBehaviour:
   bulletForce: 20
   rocketForce: 8
   ShipitsSelf: {fileID: 5791023363810299919}
---- !u!114 &8120160719406994917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5791023363810299919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf2351e08eba4048be84308d3a37759, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newSprite: {fileID: 21300000, guid: 1d9f43f6c0003f8429fc3b948340bfd9, type: 3}
-  Mag: {fileID: 5791023364665476468}
-  ShipSR: {fileID: 5791023363810299917}
-  BC: {fileID: 5791023363810299916}
-  ShipCh: {fileID: 5791023363810299919}
-  PlayerCh: {fileID: 0}
 --- !u!1 &5791023364665476468
 GameObject:
   m_ObjectHideFlags: 0

@@ -244,7 +244,9 @@ MonoBehaviour:
   firepoint3: {fileID: 5999055578830520904}
   firepoint4: {fileID: 7386763335763465735}
   laserprefab: {fileID: 8059710792068362882, guid: 6f5d731998876414d9ba8762e7fe6a52, type: 3}
+  Rocketprefab: {fileID: 0}
   bulletForce: 20
+  rocketForce: 8
   ShipitsSelf: {fileID: 3015309521697182991}
 --- !u!114 &663658892746428645
 MonoBehaviour:

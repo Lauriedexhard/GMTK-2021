@@ -48,12 +48,7 @@ public class Rocket : MonoBehaviour
         float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        if(Target == null)
-        {
 
-            followmode = false;
-
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
