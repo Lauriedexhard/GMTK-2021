@@ -24,9 +24,14 @@ public class ShipShoot : MonoBehaviour
     {
         if(ShipitsSelf.layer == 6)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButton("Fire1"))
             {
-                Shoot();
+                if (ShipBallControllor.GunReady == true)
+                {
+                    Shoot();
+                    ShipBallControllor.Charge = 0;
+                }
+
             }
         }
 
