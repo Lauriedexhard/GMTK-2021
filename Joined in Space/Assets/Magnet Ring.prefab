@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5536512315685483252}
   - component: {fileID: 5536512315685483251}
   - component: {fileID: 1233385888752631577}
-  - component: {fileID: 7329559109447294313}
+  - component: {fileID: 7798236372169471773}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -174,7 +174,7 @@ MonoBehaviour:
   laserprefab: {fileID: 8059710792068362882, guid: 6f5d731998876414d9ba8762e7fe6a52, type: 3}
   bulletForce: 20
   ShipitsSelf: {fileID: 5536512315685483255}
---- !u!114 &7329559109447294313
+--- !u!114 &7798236372169471773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,10 +183,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5536512315685483255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4a5d7ad97c406648aec1ce48a3a78bc, type: 3}
+  m_Script: {fileID: 11500000, guid: eaf2351e08eba4048be84308d3a37759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itSelf: {fileID: 5536512315685483255}
+  newSprite: {fileID: 21300000, guid: 1d9f43f6c0003f8429fc3b948340bfd9, type: 3}
+  Mag: {fileID: 5536512316813289356}
+  ShipSR: {fileID: 5536512315685483253}
+  BC: {fileID: 5536512315685483252}
 --- !u!1 &5536512316813289356
 GameObject:
   m_ObjectHideFlags: 0
