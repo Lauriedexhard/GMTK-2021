@@ -9,9 +9,16 @@ public class Connector : MonoBehaviour
 
     public GameObject Ship;
 
-    //public Rigidbody2D playership;
-
     public Collider2D C2D;
+
+    public GameObject Magnetring;
+
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +29,21 @@ public class Connector : MonoBehaviour
     {
         if(collision.gameObject.layer == 6)
         {
-            Player = collision.gameObject;
-            Ship.transform.parent = Player.transform;
-            Debug.Log("bang");
-            Ship.layer = 6;
+            if(Input.GetMouseButton(1))
+            {
+                Player = collision.gameObject;
+                Ship.transform.parent = Player.transform;
+                Debug.Log("bang");
+                Ship.layer = 6;
+                Destroy(Magnetring);
+            }
+
+
+//            ShipShoot.joinedToShip = true;
+
         }
+
+
 
     }
 

@@ -7,6 +7,10 @@ public class PlayerControllor : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public float speed = 1f;
+
+    public float sidespeed = 0.5f;
+
     public float maxVelocity = 3;
 
     public float rotationSpeed;
@@ -14,6 +18,8 @@ public class PlayerControllor : MonoBehaviour
     public Camera cam;
 
     Vector2 mousePos;
+
+    public int connectedShips = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -44,14 +50,14 @@ public class PlayerControllor : MonoBehaviour
 
     public void ThrustForward(float amount)
     {
-        Vector2 force = transform.up * amount;
+        Vector2 force = transform.up * amount * speed * Time.deltaTime;
 
         rb.AddForce(force);
     }
 
     public void ThrustSide(float amount)
     {
-        Vector2 force = transform.right * amount;
+        Vector2 force = transform.right * amount * sidespeed * Time.deltaTime;
 
         rb.AddForce(force);
     }
