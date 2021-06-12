@@ -31,7 +31,8 @@ public class ShipHealth : MonoBehaviour
             ShipSR.sprite = newSprite;
             GetComponent<Collider2D>().isTrigger = true;
             Destroy(Mag);
-
+            ParticleSystem ps = ShipSR.GetComponent<ParticleSystem>();
+            ps.Play();
             //ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed - 5;
             //ShipBallControllor.Mass = ShipBallControllor.Mass - 10;
 

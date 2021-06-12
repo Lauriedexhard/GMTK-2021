@@ -11,7 +11,7 @@ public class PlayerControllor : MonoBehaviour
 
     public float sidespeed = 0.5f;
 
-    public float maxVelocity = 3;
+    public float maxVelocity = 3f;
 
     public float rotationSpeed;
 
@@ -36,6 +36,11 @@ public class PlayerControllor : MonoBehaviour
 
         ThrustForward(yAxis);
         ThrustSide(xAxis);
+
+        
+        float x = Mathf.Clamp(rb.velocity.x, -maxVelocity, maxVelocity);
+        float y = Mathf.Clamp(rb.velocity.y, -maxVelocity, maxVelocity);
+        rb.velocity = new Vector2(x, y);
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }

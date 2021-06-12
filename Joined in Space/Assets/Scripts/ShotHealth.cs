@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class ShotHealth : MonoBehaviour
 {
-    public Sprite newSprite;
 
-
-    public SpriteRenderer ShipSR;
 
     public GameObject parent;
 

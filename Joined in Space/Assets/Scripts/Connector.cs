@@ -13,7 +13,7 @@ public class Connector : MonoBehaviour
 
     public GameObject Magnetring;
 
-
+   // public ParticleSystem PH;
     
 
 
@@ -29,13 +29,17 @@ public class Connector : MonoBehaviour
     {
         if(collision.gameObject.layer == 6)
         {
-            if(Input.GetMouseButton(1))
+            //PH.Play();
+            if (Input.GetMouseButton(1))
             {
+                
                 Player = GameObject.Find("Player");
                 Ship.transform.parent = Player.transform;
                 Debug.Log("bang");
                 Ship.layer = 6;
                 Destroy(Magnetring);
+                
+                
 
                 //Ship Ball Stuff
 
@@ -69,6 +73,11 @@ public class Connector : MonoBehaviour
                     ShipBallControllor.Mass = ShipBallControllor.Mass + 10;
                 }
 
+                if (Ship.name == "TruckShip")
+                {
+                  //  ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed + 15;
+                    ShipBallControllor.Mass = ShipBallControllor.Mass + 10;
+                }
 
             }
 

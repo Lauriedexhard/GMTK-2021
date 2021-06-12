@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Gen Spawn
+  - Rocket Spawn
+  - Thrust Spawn
+  - Chase Spawn
+  - Truck Spawn
+  - Basic Spawn
+  - 4Gun Spawm
   layers:
   - Default
   - TransparentFX

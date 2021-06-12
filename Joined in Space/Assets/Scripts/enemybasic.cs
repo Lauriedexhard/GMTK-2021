@@ -28,11 +28,16 @@ public class enemybasic : MonoBehaviour
         {
             enemy.SetActive(false);
             enemy2.SetActive(false);
+
+            ParticleSystem ps = enemy.GetComponent<ParticleSystem>();
+            ps.Play();
         }
         else if(collision.gameObject.layer == 6)
         {
             enemy.SetActive(false);
             enemy2.SetActive(false);
+            ParticleSystem ps = enemy.GetComponent<ParticleSystem>();
+            ps.Play();
         }
 
     }
@@ -43,6 +48,8 @@ public class enemybasic : MonoBehaviour
         {
             enemy.SetActive(false);
             enemy2.SetActive(false);
+            ParticleSystem ps = enemy.GetComponent<ParticleSystem>();
+            ps.Play();
         }
     }
 
