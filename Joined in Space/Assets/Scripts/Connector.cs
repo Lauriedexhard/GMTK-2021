@@ -13,6 +13,11 @@ public class Connector : MonoBehaviour
 
     public GameObject Magnetring;
 
+    public AudioClip connectoraud;
+     Camera cameraAS;
+     AudioSource AS;
+
+
    // public ParticleSystem PH;
     
 
@@ -27,6 +32,10 @@ public class Connector : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        cameraAS = Camera.main;
+        AS = cameraAS.gameObject.GetComponent<AudioSource>();
+
         if(collision.gameObject.layer == 6)
         {
             //PH.Play();
@@ -38,8 +47,9 @@ public class Connector : MonoBehaviour
                 Debug.Log("bang");
                 Ship.layer = 6;
                 Destroy(Magnetring);
-                
-                
+                AS.PlayOneShot(connectoraud, 0.1f);
+
+
 
                 //Ship Ball Stuff
 

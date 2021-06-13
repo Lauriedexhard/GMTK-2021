@@ -37,12 +37,38 @@ public class ShipHealth : MonoBehaviour
             //ShipBallControllor.Mass = ShipBallControllor.Mass - 10;
 
             //Ship Ball
-            if (ShipCh.transform.parent  == PlayerCh)
+            if (ShipCh.transform.parent == PlayerCh)
             {
                 ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed - 5;
                 ShipBallControllor.Mass = ShipBallControllor.Mass - 10;
             }
-            
+
+        }
+
+
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            transform.parent = null;
+            gameObject.layer = 9;
+            ShipSR.sprite = newSprite;
+            GetComponent<Collider2D>().isTrigger = true;
+            Destroy(Mag);
+            ParticleSystem ps = ShipSR.GetComponent<ParticleSystem>();
+            ps.Play();
+            //ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed - 5;
+            //ShipBallControllor.Mass = ShipBallControllor.Mass - 10;
+
+            //Ship Ball
+            if (ShipCh.transform.parent == PlayerCh)
+            {
+                ShipBallControllor.PowerUsed = ShipBallControllor.PowerUsed - 5;
+                ShipBallControllor.Mass = ShipBallControllor.Mass - 10;
+            }
+
         }
     }
 

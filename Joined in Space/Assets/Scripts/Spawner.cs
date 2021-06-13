@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
             }
         }
 
-        if (SpawnerLoc.tag == "4Gun Spawn")
+        if (SpawnerLoc.tag == "4Gun Spawm")
         {
             if (Input.GetKeyDown("l"))
             {
@@ -103,6 +103,19 @@ public class Spawner : MonoBehaviour
         if (SpawnerLoc.tag == "Truck Spawn")
         {
             if (Input.GetKeyDown(";"))
+            {
+                Instantiate(ShipPRFab, SpawnerLoc.transform.position, Quaternion.identity);
+            }
+            if (TimeToSpawn == true)
+            {
+                Instantiate(ShipPRFab, SpawnerLoc.transform.position, Quaternion.identity);
+                TimeToSpawn = false;
+            }
+        }
+
+        if (SpawnerLoc.tag == "ShootShip")
+        {
+            if (Input.GetKeyDown("'"))
             {
                 Instantiate(ShipPRFab, SpawnerLoc.transform.position, Quaternion.identity);
             }

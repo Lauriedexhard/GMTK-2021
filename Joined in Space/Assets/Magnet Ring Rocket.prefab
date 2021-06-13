@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f2fb03d3e0c5c3b41956473e091c575c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79f621fdc33587e42b66f2cb615d8f1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,18 +133,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0029302835, y: -0.011857748}
+  m_Offset: {x: 0.0010340214, y: -0.16249937}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.32, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5310614, y: 0.3245721}
+  m_Size: {x: 1.0992713, y: 0.8954247}
   m_EdgeRadius: 0
 --- !u!114 &5791023363810299915
 MonoBehaviour:
@@ -161,6 +161,7 @@ MonoBehaviour:
   Ship: {fileID: 5791023363810299919}
   C2D: {fileID: 5791023363810299916}
   Magnetring: {fileID: 5791023364665476468}
+  connectoraud: {fileID: 8300000, guid: 5764ccf2e7307bb4ab96bdf38456fd56, type: 3}
 --- !u!114 &8120160719406994917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5020,7 +5021,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.62
+  m_Radius: 7
 --- !u!114 &5791023364665476469
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,16 @@ public class EnemyFollow : MonoBehaviour
 
     public Rigidbody2D Enemyrb;
 
+    public Transform Firepoint;
+    public GameObject ENElaserprefab;
+    public float bulletForce = 20f;
+    public float charge;
+    public GameObject Shootship;
+    public bool Ready;
+
+    public AudioSource AS;
+    public AudioClip Laz2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +35,35 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(followmode == true)
+
+        AS = Camera.main.GetComponent<AudioSource>();
+
+
+        if(Shootship.tag == "ShootEnemy")
+        {
+            if (charge < 100)
+            {
+                charge += Time.deltaTime * 75;
+            }
+
+            if (charge > 100)
+            {
+                Ready = true;
+
+
+            }
+            if(Ready == true && followmode == true)
+            {
+              
+                shoot();
+                charge = 0;
+                Ready = false;
+                AS.PlayOneShot(Laz2, 0.1f);
+            }
+        }
+
+
+        if (followmode == true)
         {
             transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, enemySpeed * Time.deltaTime);
         }
@@ -59,6 +97,12 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
+    void shoot()
+    {
+        GameObject bullet = Instantiate(ENElaserprefab, Firepoint.position, Firepoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(Firepoint.up * bulletForce, ForceMode2D.Impulse);
+    }
     private void FixedUpdate()
     {
 

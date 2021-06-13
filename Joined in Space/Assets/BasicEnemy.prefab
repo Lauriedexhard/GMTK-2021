@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5178113888411735368}
   - component: {fileID: 9176645942868470626}
-  - component: {fileID: 7246339585511808842}
   - component: {fileID: 9090967625029495886}
   - component: {fileID: 4977550550977808609}
   - component: {fileID: 4658187746465197124}
   - component: {fileID: 7368453138868135905}
+  - component: {fileID: 6346861315535894565}
   m_Layer: 8
   m_Name: Gray
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 71a857f34669f0d40a462c647badc63f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d975fc05f6779774592f8676ffffb763, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7246339585511808842
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3722046957227539746}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.64}
-    newSize: {x: 0.32, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.64}
-  m_EdgeRadius: 0
 --- !u!114 &9090967625029495886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4920,6 +4894,53 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!60 &6346861315535894565
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722046957227539746}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.32, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.38, y: -0.45999998}
+      - {x: 0.32999998, y: -0.29}
+      - {x: 0.29, y: -0.16}
+      - {x: 0.26999998, y: -0.099999994}
+      - {x: 0.25, y: -0.03}
+      - {x: 0.17, y: 0.22999999}
+      - {x: 0.14, y: 0.32999998}
+      - {x: 0.099999994, y: 0.47}
+      - {x: 0.06, y: 0.59}
+      - {x: 0.04, y: 0.64}
+      - {x: -0.04, y: 0.64}
+      - {x: -0.06, y: 0.59}
+      - {x: -0.14, y: 0.32999998}
+      - {x: -0.17, y: 0.22999999}
+      - {x: -0.32999998, y: -0.29}
+      - {x: -0.35999998, y: -0.39}
+      - {x: -0.41, y: -0.56}
+      - {x: -0.42, y: -0.61}
+      - {x: -0.39999998, y: -0.63}
+      - {x: 0.39999998, y: -0.63}
+      - {x: 0.42, y: -0.61}
+      - {x: 0.42, y: -0.58}
 --- !u!1 &5164805234895616859
 GameObject:
   m_ObjectHideFlags: 0
@@ -4968,7 +4989,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 6.22
+  m_Radius: 14
 --- !u!114 &8559184623190584717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4986,3 +5007,9 @@ MonoBehaviour:
   Target: {fileID: 3722046957227539746}
   cam: {fileID: 0}
   Enemyrb: {fileID: 4977550550977808609}
+  Firepoint: {fileID: 5178113888411735368}
+  ENElaserprefab: {fileID: 8457105810212049406, guid: 7cd4b2990ed137c4f8aafd25713e5323, type: 3}
+  bulletForce: 20
+  charge: 0
+  Shootship: {fileID: 5164805234895616859}
+  Ready: 0

@@ -8,6 +8,8 @@ public class ShotHealth : MonoBehaviour
 
     public GameObject parent;
 
+    public float FlightTime = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,12 @@ public class ShotHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        FlightTime -= Time.deltaTime;
+
+        if (FlightTime < 0.01)
+        {
+            Destroy(parent);
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -25,8 +32,8 @@ public class ShotHealth : MonoBehaviour
         if(collision.gameObject.layer == 8)
         {
             Debug.Log("KAboom");
-           // ShipSR.sprite = newSprite;
-             parent.SetActive(false);
+            // ShipSR.sprite = newSprite;
+            Destroy(parent);
 
         }
 
@@ -40,7 +47,7 @@ public class ShotHealth : MonoBehaviour
         {
             Debug.Log("KAboom");
             //ShipSR.sprite = newSprite;
-             parent.SetActive(false);
+            Destroy(parent);
 
         }
     }

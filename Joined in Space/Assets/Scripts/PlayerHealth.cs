@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.layer == 8)
         {
-
+            WinGameOver.Gameover = true;
             itSelf.SetActive(false);
         }
     }
@@ -42,6 +42,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
+            WinGameOver.Gameover = true;
             itSelf.SetActive(false);
         }
     }

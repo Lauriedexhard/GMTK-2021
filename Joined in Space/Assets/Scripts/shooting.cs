@@ -8,6 +8,9 @@ public class shooting : MonoBehaviour
     public Transform firepoint;
     public GameObject laserprefab;
 
+    public AudioSource laser;
+    public AudioClip laserclip;
+
     public float bulletForce = 20f;
 
 
@@ -26,7 +29,9 @@ public class shooting : MonoBehaviour
             if(ShipBallControllor.GunReady == true)
             {
                 Shoot();
+                
                 ShipBallControllor.Charge = 0;
+                laser.PlayOneShot(laserclip, 0.1f);
             }
 
         }
