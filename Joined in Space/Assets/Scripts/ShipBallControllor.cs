@@ -47,8 +47,8 @@ public class ShipBallControllor : MonoBehaviour
         Chargeind.text = "Charge: " + Charge;
         ThrustUI.text = "Thrust: " + (300 - Mass);
 
-        Mass = Mathf.Clamp(Mass, -300, 250);
-        PowerUsed = Mathf.Clamp(PowerUsed, -200, 180);
+        Mass = Mathf.Clamp(Mass, -300, 200);
+        PowerUsed = Mathf.Clamp(PowerUsed, -200, 135);
 
         PUPub = PowerUsed;
         MassPub = Mass;

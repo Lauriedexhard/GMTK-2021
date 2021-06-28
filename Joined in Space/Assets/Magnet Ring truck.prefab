@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 341315560777480232}
   - component: {fileID: 4933156050941185709}
   - component: {fileID: 7258843310433317304}
+  - component: {fileID: 6456496082744768101}
   m_Layer: 0
   m_Name: TruckShip
   m_TagString: Untagged
@@ -143,7 +144,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f812858af9b79bc4995a150235ef750b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25eb588a0744c5649b21b710c9a67943, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -161,7 +162,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2617113129129573826}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -171,7 +172,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 2.3333333, y: 3.8133333}
     newSize: {x: 0.32, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -196,7 +197,6 @@ MonoBehaviour:
   C2D: {fileID: 2617113129129573825}
   Magnetring: {fileID: 2617113127606446265}
   connectoraud: {fileID: 8300000, guid: 5764ccf2e7307bb4ab96bdf38456fd56, type: 3}
-  cameraAS: {fileID: 0}
 --- !u!114 &341315560777480232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4987,6 +4987,62 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!60 &6456496082744768101
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2617113129129573826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.3333333, y: 3.8133333}
+    newSize: {x: 0.32, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.46, y: -0.10666667}
+      - {x: 0.74, y: -0.10666667}
+      - {x: 0.7666667, y: -0.08}
+      - {x: 0.7666667, y: 0.06666667}
+      - {x: 0.9533334, y: 0.053333335}
+      - {x: 0.9666667, y: 0.10666667}
+      - {x: 0.9666667, y: 0.25333333}
+      - {x: 0.9266667, y: 0.33333334}
+      - {x: 0.75333333, y: 1.1733334}
+      - {x: 0.7266667, y: 1.2}
+      - {x: 0.31333333, y: 1.2133334}
+      - {x: 0.033333335, y: 1.3866667}
+      - {x: -0.02, y: 1.3866667}
+      - {x: -0.16666667, y: 1.3066667}
+      - {x: -0.31333333, y: 1.2133334}
+      - {x: -0.7266667, y: 1.2}
+      - {x: -0.75333333, y: 1.1866667}
+      - {x: -0.8066667, y: 0.97333336}
+      - {x: -0.9533334, y: 0.25333333}
+      - {x: -0.9666667, y: 0.10666667}
+      - {x: -0.94, y: 0.08}
+      - {x: -0.71333337, y: -0.10666667}
+      - {x: -0.4466667, y: -0.120000005}
+      - {x: -0.42000002, y: -0.04}
+      - {x: -0.35333335, y: 0.08}
+      - {x: -0.3, y: -0.06666667}
+      - {x: -0.22, y: -0.16}
+      - {x: 0.20666668, y: -0.16}
+      - {x: 0.26000002, y: -0.120000005}
+      - {x: 0.35333335, y: 0.08}
+      - {x: 0.43333334, y: -0.08}
 --- !u!1 &8620539211907717196
 GameObject:
   m_ObjectHideFlags: 0
